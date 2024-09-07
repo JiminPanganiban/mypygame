@@ -1,10 +1,3 @@
-# Instructions:
-# 1. Click "Start" to begin the game.
-# 2. Use the left and right arrow keys to move the plane at the bottom of the screen.
-# 3. The ball will be launched from the plane and bounce around. Catching the ball gives you 1 point.
-# 4. If the ball falls below the screen without being caught, "Try Again" will be displayed.
-# 5. The score and high score are displayed at the top of the screen.
-
 import pygame
 import random
 
@@ -27,10 +20,7 @@ FPS = 60
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Plane and Ball Game')
 
-# Clock
 clock = pygame.time.Clock()
-
-# Font
 font = pygame.font.Font(None, 36)
 
 def draw_text(text, font, color, surface, x, y):
@@ -114,7 +104,7 @@ def main():
                 draw_objects()
                 draw_text('Try Again!', font, TEXT_COLOR, screen, WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2)
                 pygame.display.flip()
-                pygame.time.wait(2000)  # Wait for 2 seconds
+                pygame.time.wait(2000) 
                 score = 0  # Reset score
                 main()
             else:
